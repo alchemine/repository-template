@@ -1,0 +1,20 @@
+inference:
+  llm:
+    providers:
+      gemma-3-27b-it:
+        model_config:
+          openai_api_base: http://localhost:8000/v1
+          openai_api_key: empty
+          model: google/gemma-3-27b-it
+          max_tokens: 1000
+          timeout: 300
+          temperature: 1.0
+          top_p: 0.95 # default: 1.0
+          extra_body:
+            top_k: 64 # default: all
+            min_p: 0.0 # default: 0.0
+            repetition_penalty: 1.0 # default: 1.0
+            chat_template_kwargs:
+              enable_thinking: false
+        invoke_config:
+          max_concurrency: 64

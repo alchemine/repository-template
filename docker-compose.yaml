@@ -1,0 +1,20 @@
+services:
+  main:
+    image: alchemine/repository-template:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: repository-template
+        ENV: dev
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    container_name: main
+    network_mode: host
+    hostname: dev
+    restart: always
+    volumes:
+      - ./:/app
+    ports:
+      - 7860:7860
+    command: sleep infinity

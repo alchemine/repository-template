@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-toolsai.jupyter",
+    "github.vscode-pull-request-github",
+    "ms-python.black-formatter",
+    "esbenp.prettier-vscode"
+  ]
+}
